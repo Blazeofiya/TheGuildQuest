@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guild Map | APS Delray</title>
+    <meta name="description" content="Explore the growing network of Decentralized Impact Guilds (DIGs) around the world and find one near you.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">APS DELRAY</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">What Is a DIG?</a></li>
+                    <li><a href="aps-delray.html">APS Delray</a></li>
+                    <li><a href="start.html">Start a Guild</a></li>
+                    <li><a href="guilds.html" class="active">Guild Map</a></li>
+                    <li><a href="dispatches.html">Dispatches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Guild Map</h1>
+                <p>Discover Decentralized Impact Guilds in communities around the world</p>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Interactive Guild Map</h2>
+                <p>Below you'll find all the active DIGs in our growing network. Each guild operates independently while sharing core values and approaches.</p>
+                <div class="map-container">
+                    <!-- Placeholder for interactive map (to be implemented with JavaScript) -->
+                    <img src="assets/images/guild-map.jpg" alt="Map of Decentralized Impact Guilds worldwide" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <p class="map-note">Note: This map will be updated as new guilds join our network. Can't find a guild near you? <a href="start.html">Start one!</a></p>
+            </div>
+        </section>
+
+        <section class="guilds-section">
+            <div class="container">
+                <h2>Active Guilds</h2>
+                <div class="guilds-grid">
+                    <div class="guild-card">
+                        <h3>APS Delray</h3>
+                        <p class="guild-location">Delray Beach, Florida</p>
+                        <p class="guild-bio">Our flagship guild meets monthly on Atlantic Dunes Beach for sunset gatherings, community projects, and shared meals.</p>
+                        <a href="aps-delray.html" class="btn btn-text">Learn more <span class="arrow">→</span></a>
+                    </div>
+                    <div class="guild-card">
+                        <h3>Watershed Keepers</h3>
+                        <p class="guild-location">Portland, Oregon</p>
+                        <p class="guild-bio">Focused on urban watershed restoration, this guild combines environmental stewardship with community building through monthly creek cleanups.</p>
+                        <a href="mailto:watershed@example.com" class="btn btn-text">Contact <span class="arrow">→</span></a>
+                    </div>
+                    <div class="guild-card">
+                        <h3>Neighborhood Harvest</h3>
+                        <p class="guild-location">Austin, Texas</p>
+                        <p class="guild-bio">Building food sovereignty through community gardens, seed sharing, and seasonal harvest celebrations in East Austin neighborhoods.</p>
+                        <a href="mailto:harvest@example.com" class="btn btn-text">Contact <span class="arrow">→</span></a>
+                    </div>
+                    <div class="guild-card">
+                        <h3>City Commons</h3>
+                        <p class="guild-location">Detroit, Michigan</p>
+                        <p class="guild-bio">Reclaiming vacant lots as community spaces through collaborative design, urban agriculture, and neighborhood gatherings.</p>
+                        <a href="mailto:commons@example.com" class="btn btn-text">Contact <span class="arrow">→</span></a>
+                    </div>
+                    <div class="guild-card">
+                        <h3>Mountain Stewards</h3>
+                        <p class="guild-location">Asheville, North Carolina</p>
+                        <p class="guild-bio">Connecting urban dwellers with the surrounding Appalachian ecosystem through monthly hikes, trail maintenance, and wilderness skills sharing.</p>
+                        <a href="mailto:mountains@example.com" class="btn btn-text">Contact <span class="arrow">→</span></a>
+                    </div>
+                    <div class="guild-card">
+                        <h3>Harbor Collective</h3>
+                        <p class="guild-location">Baltimore, Maryland</p>
+                        <p class="guild-bio">Focusing on the relationship between city and water, this guild combines harbor cleanups with maritime history and water quality monitoring.</p>
+                        <a href="mailto:harbor@example.com" class="btn btn-text">Contact <span class="arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="add-guild">
+            <div class="container">
+                <h2>Add Your Guild to the Map</h2>
+                <p>Have you started a DIG in your community? Let us know so we can add you to our growing network.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="guild-name" class="form-label">Guild Name</label>
+                        <input type="text" id="guild-name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guild-location" class="form-label">Location</label>
+                        <input type="text" id="guild-location" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guild-bio" class="form-label">Brief Description</label>
+                        <textarea id="guild-bio" class="form-textarea" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Contact Email</label>
+                        <input type="email" id="contact-email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="founding-date" class="form-label">Founding Date</label>
+                        <input type="date" id="founding-date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="guild-website" class="form-label">Website (if available)</label>
+                        <input type="url" id="guild-website" class="form-input">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Your Guild</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="join-movement">
+            <div class="container">
+                <h2>Can't Find a Guild Near You?</h2>
+                <p>The DIG movement is still growing. If there isn't a guild in your area yet, consider starting one!</p>
+                <div class="cta-buttons">
+                    <a href="start.html" class="btn btn-primary">Start Your Own Guild</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Support</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">APS DELRAY</a>
+                    <p class="tagline">DIG deep. Grow local. Live free.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">What Is a DIG?</a></li>
+                        <li><a href="aps-delray.html">APS Delray</a></li>
+                        <li><a href="start.html">Start a Guild</a></li>
+                        <li><a href="guilds.html">Guild Map</a></li>
+                        <li><a href="dispatches.html">Dispatches</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Discord" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 9a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5v6a5 5 0 0 0 5 5h6a5 5 0 0 0 5-5V9Z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Matrix" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"></path><path d="M19 9v12"></path><path d="M5 9l14-6"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Email" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Decentralized Impact Guild. All rights reserved.</p>
+                <div class="hidden-treasure" title="X marks the spot...">✖️</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
