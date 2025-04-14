@@ -249,7 +249,7 @@ img {
     min-height: 600px;
     display: flex;
     align-items: center;
-    background-image: url('../images/hero-background.jpg');
+    background-image: url('../images/hero-background.png');
     background-size: cover;
     background-position: center;
     color: white;
