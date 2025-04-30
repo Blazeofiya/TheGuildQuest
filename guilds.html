@@ -9,6 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    
+    <style>
+        .map-container {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -48,8 +63,8 @@
                 <h2>Interactive Guild Map</h2>
                 <p>Below you'll find all the active DIGs in our growing network. Each guild operates independently while sharing core values and approaches.</p>
                 <div class="map-container">
-                    <!-- Placeholder for interactive map (to be implemented with JavaScript) -->
-                    <img src="assets/images/guild-map.jpg" alt="Map of Decentralized Impact Guilds worldwide" style="width: 100%; height: 100%; object-fit: cover;">
+                    <!-- Interactive map will be rendered here -->
+                    <div id="map"></div>
                 </div>
                 <p class="map-note">Note: This map will be updated as new guilds join our network. Can't find a guild near you? <a href="start.html">Start one!</a></p>
             </div>
@@ -162,6 +177,41 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    
+    <script>
+        // Initialize the map
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create map centered on Delray Beach
+            const map = L.map('map').setView([26.4416729, -80.0620001], 13);
+            
+            // Add tile layer (OpenStreetMap)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                maxZoom: 19
+            }).addTo(map);
+            
+            // Add marker for APS Delray
+            const apsDelrayMarker = L.marker([26.4416729, -80.0620001]).addTo(map);
+            apsDelrayMarker.bindPopup("<strong>APS Delray</strong><br>Delray Beach, Florida").openPopup();
+            
+            // Make the map responsive
+            window.addEventListener('resize', function() {
+                map.invalidateSize();
+            });
+            
+            // Mobile nav functionality
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
